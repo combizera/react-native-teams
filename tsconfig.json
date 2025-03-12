@@ -8,13 +8,13 @@
         "./assets/*"
       ],
       "@components/*": [
-          "./components/*"
+        "./components/*"
       ],
       "@routes/*": [
-          "./routes/*"
+        "./routes/*"
       ],
       "@screens/*": [
-          "./app/screens/*"
+        "./app/screens/*"
       ],
       "@storage/*": [
         "./storage/*"

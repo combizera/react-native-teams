@@ -5,14 +5,14 @@ module.exports = function(api) {
     plugins: [
       [
         'module-resolver', {
-          'root': ['./src'],
+          'root': ['./'],
           'alias': {
             '@asset': './asset',
-            '@components': './src/components',
-            '@routes': './src/routes',
+            '@components': './components',
+            '@routes': './routes',
             '@screens': './app/screens',
-            '@storage': './src/storage',
-            '@utils': './src/utils',
+            '@storage': './storage',
+            '@utils': './utils',
           },
         },
       ],
