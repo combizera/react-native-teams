@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66bf0cff-8038-4cfe-84d1-590d10d7140e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/screens/NewGroup/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/screens/NewGroup/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Input/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Input/styles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/NewGroup/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/NewGroup/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +88,7 @@
       <workItem from="1741796047732" duration="1775000" />
       <workItem from="1741799954285" duration="7774000" />
       <workItem from="1741917215598" duration="2314000" />
-      <workItem from="1741952126851" duration="2423000" />
+      <workItem from="1741952126851" duration="3989000" />
     </task>
     <servers />
   </component>
