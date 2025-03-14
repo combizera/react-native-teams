@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66bf0cff-8038-4cfe-84d1-590d10d7140e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/screens/Players/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/screens/Players/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ButtonIcon/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ButtonIcon/styles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/Players/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/Players/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +89,8 @@
       <workItem from="1741799954285" duration="7774000" />
       <workItem from="1741917215598" duration="2314000" />
       <workItem from="1741952126851" duration="5516000" />
-      <workItem from="1741959814523" duration="1102000" />
+      <workItem from="1741959814523" duration="2056000" />
+      <workItem from="1741972010123" duration="1470000" />
     </task>
     <servers />
   </component>

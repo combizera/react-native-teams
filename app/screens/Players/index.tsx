@@ -2,6 +2,7 @@ import { Container } from './styles';
 
 import { Header } from "@components/Header";
 import { Highligth } from "@components/Highligth";
+import { ButtonIcon } from "@components/ButtonIcon";
 
 export function Players() {
   return (
@@ -13,6 +14,9 @@ export function Players() {
         subtitle="Adicione a galera e separe os times"
       />
 
+      <ButtonIcon
+
+      />
     </Container>
   );
 }
