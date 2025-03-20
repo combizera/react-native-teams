@@ -1,4 +1,4 @@
-import { Container, Form, HeaderList, NumbersOfPlayers } from './styles';
+import { Container, Form, HeaderList, NumberOfPlayers } from './styles';
 
 import { Header } from "@components/Header";
 import { Highligth } from "@components/Highligth";
@@ -49,9 +49,9 @@ export function Players() {
           horizontal
         />
 
-        <NumbersOfPlayers>
+        <NumberOfPlayers>
           {players.length}
-        </NumbersOfPlayers>
+        </NumberOfPlayers>
       </HeaderList>
 
       <FlatList
