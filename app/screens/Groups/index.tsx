@@ -8,7 +8,7 @@ import { GroupCard } from '@components/GroupCard';
 import { ListEmpty } from '@components/ListEmpty';
 import { Button } from '@components/Button';
 
-export default function Groups() {
+export function Groups() {
   const [groups, setGroups] = useState<string[]>([]);
 
   return (
@@ -28,7 +28,7 @@ export default function Groups() {
             title={item}
           />
         )}
-        contentContainerStyle={groups.length === 0 && { flex: 1}}
+        contentContainerStyle={groups.length === 0 && { flex: 1 }}
         ListEmptyComponent={() => (
           <ListEmpty
             message="Que tal cadastrar a primeira turma?"
@@ -38,7 +38,7 @@ export default function Groups() {
 
       <Button
         title="Criar nova turma"
-     />
+      />
     </S.Container>
   );
 }
