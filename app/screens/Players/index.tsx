@@ -1,26 +1,36 @@
-import { Container, Form, HeaderList, NumberOfPlayers } from './styles';
+import { useState } from 'react';
+import { FlatList } from 'react-native';
+import { useRoute } from '@react-navigation/native';
 
-import { Header } from "@components/Header";
-import { Highligth } from "@components/Highligth";
-import { ButtonIcon } from "@components/ButtonIcon";
 import { Input } from '@components/Input';
 import { Filter } from '@components/Filter';
-import { FlatList } from 'react-native';
-import { useState } from 'react';
-import { PlayerCard } from '@components/PlayerCard';
-import { ListEmpty } from '@components/ListEmpty';
+import { Header } from "@components/Header";
 import { Button } from '@components/Button';
+import { ListEmpty } from '@components/ListEmpty';
+import { Highligth } from "@components/Highligth";
+import { ButtonIcon } from "@components/ButtonIcon";
+import { PlayerCard } from '@components/PlayerCard';
+
+import { Container, Form, HeaderList, NumberOfPlayers } from './styles';
+
+type RouteParams = {
+  group: string;
+};
 
 export function Players() {
   const [team, setTeam] = useState('Time A');
   const [players, setPlayers] = useState(['Ygor', 'Combi', 'Diego', 'Lucas', 'Andre', 'Rafael', 'Matheus', 'Júlia', 'Maria', 'João', 'Pedro', 'Paulo']);
+
+  const route = useRoute();
+  const { group } = route.params as RouteParams;
+
 
   return (
     <Container>
       <Header showBackButton />
 
       <Highligth
-        title="Nome da turma"
+        title={group}
         subtitle="Adicione a galera e separe os times"
       />
 
