@@ -34,3 +34,11 @@ Características:
 - Permite esconder e exibir o menu lateral conforme necessário.
 - Ideal para apps com diversas opções, como configurações, categorias, e navegação extensiva.
 - Oferece uma experiência mais organizada quando há muitas telas disponíveis.
+
+---
+
+## Prop Drilling
+
+---
+
+## Async Storage
