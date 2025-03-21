@@ -24,7 +24,6 @@ export function Players() {
   const route = useRoute();
   const { group } = route.params as RouteParams;
 
-
   return (
     <Container>
       <Header showBackButton />
