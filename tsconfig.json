@@ -11,13 +11,13 @@
         "./components/*"
       ],
       "@routes/*": [
-        "./routes/*"
+        "./assets/routes/*"
       ],
       "@screens/*": [
         "./app/screens/*"
       ],
       "@storage/*": [
-        "./storage/*"
+        "./assets/storage/*"
       ],
       "@utils/*": [
         "./utils/*"

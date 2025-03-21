@@ -9,9 +9,9 @@ module.exports = function(api) {
           'alias': {
             '@asset': './asset',
             '@components': './components',
-            '@routes': './routes',
+            '@routes': './assets/routes',
             '@screens': './app/screens',
-            '@storage': './storage',
+            '@storage': './assets/storage',
             '@utils': './utils',
           },
         },
