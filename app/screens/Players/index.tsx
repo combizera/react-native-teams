@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Alert, FlatList } from 'react-native';
+import { useState, useEffect, useRef } from 'react';
+import { Alert, FlatList, TextInput, Keyboard } from 'react-native';
 import { useRoute } from '@react-navigation/native';
 
 import { AppError } from '@utils/AppError';
@@ -45,6 +45,10 @@ export function Players() {
 
     try {
       await playerAddByGroup(newPlayer, group);
+
+      Keyboard.dismiss();
+
+      setNewPlayerName('');
       fetchPlayersByTeam();
 
       const players = await playerGetByGroup(group);
@@ -88,6 +92,7 @@ export function Players() {
         <Input
           onChangeText={setNewPlayerName}
           placeholder='Nome da turma'
+          value={newPlayerName}
           autoCorrect={false}
         />
 
