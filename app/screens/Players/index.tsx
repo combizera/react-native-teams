@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FlatList } from 'react-native';
+import { Alert, FlatList } from 'react-native';
 import { useRoute } from '@react-navigation/native';
 
 import { Input } from '@components/Input';
@@ -12,17 +12,48 @@ import { ButtonIcon } from "@components/ButtonIcon";
 import { PlayerCard } from '@components/PlayerCard';
 
 import { Container, Form, HeaderList, NumberOfPlayers } from './styles';
+import { AppError } from '@utils/AppError';
+import { playerAddByGroup } from '@assets/storage/player/playerAddByGroup';
+import { playerGetByGroup } from '@assets/storage/player/playersGetByGroup';
 
 type RouteParams = {
   group: string;
 };
 
 export function Players() {
+  const [newPlayerName, setNewPlayerName] = useState('');
+
   const [team, setTeam] = useState('Time A');
-  const [players, setPlayers] = useState(['Ygor', 'Combi', 'Diego', 'Lucas', 'Andre', 'Rafael', 'Matheus', 'Júlia', 'Maria', 'João', 'Pedro', 'Paulo']);
+  const [players, setPlayers] = useState([]);
 
   const route = useRoute();
   const { group } = route.params as RouteParams;
+
+  async function handleAddPlayer() {
+    if (newPlayerName.trim().length === 0) {
+      return Alert.alert('Nova pessoa', 'Digite o nome da pessoa que deseja adicionar');
+    }
+
+    const newPlayer = {
+      name: newPlayerName,
+      team,
+    }
+
+    try {
+      await playerAddByGroup(newPlayer, group);
+
+      const players = await playerGetByGroup(group);
+      console.log(players);
+
+    } catch (error) {
+      if (error instanceof AppError) {
+        return Alert.alert('Nova pessoa', error.message);
+      } else {
+        console.log(error);
+        Alert.alert('Nova pessoa', 'Não foi possível adicionar.');
+      }
+    }
+  }
 
   return (
     <Container>
@@ -35,12 +66,14 @@ export function Players() {
 
       <Form>
         <Input
+          onChangeText={setNewPlayerName}
           placeholder='Nome da turma'
           autoCorrect={false}
         />
 
         <ButtonIcon
           icon="add"
+          onPress={handleAddPlayer}
         />
       </Form>
 
