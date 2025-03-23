@@ -94,6 +94,8 @@ export function Players() {
           placeholder='Nome da turma'
           value={newPlayerName}
           autoCorrect={false}
+          onSubmitEditing={handleAddPlayer}
+          returnKeyType="done"
         />
 
         <ButtonIcon
