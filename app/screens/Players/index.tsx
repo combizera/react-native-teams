@@ -1,12 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import { Alert, FlatList, TextInput, Keyboard } from 'react-native';
-import { useRoute } from '@react-navigation/native';
+import { useRoute, useNavigation } from '@react-navigation/native';
 
 import { AppError } from '@utils/AppError';
 
 import { playerAddByGroup } from '@assets/storage/player/playerAddByGroup';
 import { playerGetByGroup } from '@assets/storage/player/playersGetByGroup';
 import { PlayerStorageDTO } from '@assets/storage/player/PlayerStorageDTO';
+import { groupRemoveByName } from '@assets/storage/group/groupRemoveByName';
 import { playerRemoveByGroup } from '@assets/storage/player/playerRemoveByGroup';
 import { playersGetByGroupAndTeam } from '@assets/storage/player/playersGetByGroupAndTeam';
 
@@ -31,6 +32,7 @@ export function Players() {
   const [team, setTeam] = useState('Time A');
   const [players, setPlayers] = useState<PlayerStorageDTO[]>([]);
 
+  const navigation = useNavigation();
   const route = useRoute();
   const { group } = route.params as RouteParams;
 
@@ -85,6 +87,32 @@ export function Players() {
       console.log(error);
       Alert.alert('Remover pessoa', 'Não foi possível remover a pessoa.');
     }
+  }
+
+  async function groupRemove() {
+    try {
+
+      await groupRemoveByName(group);
+
+      navigation.navigate('groups');
+
+    } catch (error) {
+      console.log(error);
+      Alert.alert('Remover Grupo', 'Não foi possível remover a grupo.');
+    }
+  }
+
+  async function handleGroupRemove() {
+    Alert.alert('Remover Grupo', 'Deseja realmente remover essa grupo?',
+      [
+        {
+          text: 'Não', style: 'cancel'
+        },
+        {
+          text: 'Sim', onPress: () => groupRemove(),
+        }
+      ]
+    );
   }
 
   useEffect(() => {
@@ -159,6 +187,7 @@ export function Players() {
       <Button
         title="Remover Turma"
         type="SECONDARY"
+        onPress={handleGroupRemove}
       />
 
     </Container >
