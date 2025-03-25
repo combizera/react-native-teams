@@ -3,13 +3,15 @@ import { Alert, FlatList } from 'react-native';
 import { useNavigation, useFocusEffect } from '@react-navigation/native'
 
 import * as S from './styles';
+
+import { Button } from '@components/Button';
 import { Header } from '@components/Header';
+import { Loading } from '@components/Loading';
 import { Highligth } from '@components/Highligth';
 import { GroupCard } from '@components/GroupCard';
 import { ListEmpty } from '@components/ListEmpty';
-import { Button } from '@components/Button';
+
 import { groupsGetAll } from '@assets/storage/group/groupsGetAll';
-import { Loading } from '@components/Loading';
 
 export function Groups() {
   const [isLoading, setIsLoading] = useState(true);
