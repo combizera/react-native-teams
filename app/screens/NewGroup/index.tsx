@@ -17,7 +17,6 @@ export function NewGroup() {
 
   async function handleNew() {
     try {
-
       if (group.trim().length === 0) {
         return Alert.alert('Novo Grupo', 'Informe o nome do grupo');
       }
@@ -33,7 +32,6 @@ export function NewGroup() {
         Alert.alert('Novo Grupo', 'Não foi possível criar um novo grupo');
         console.log(error);
       }
-
     }
   }
 

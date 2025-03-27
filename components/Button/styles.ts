@@ -7,8 +7,7 @@ type Props = {
   type: ButtonTypeStylePropos;
 }
 
-export const Container = styled(TouchableOpacity) <Props>
-`
+export const Container = styled(TouchableOpacity) <Props>`
   flex: 1;
   justify-content: center;
   align-items: center;

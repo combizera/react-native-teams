@@ -152,7 +152,7 @@ export function Players() {
 
       <HeaderList>
         <FlatList
-          data={['Time A', 'Time B', 'Time C', 'Time D']}
+          data={['Time A', 'Time B']}
           keyExtractor={(item) => item}
           renderItem={({ item }) => (
             <Filter
@@ -193,7 +193,6 @@ export function Players() {
             ]}
           />
       }
-
 
       <Button
         title="Remover Turma"
